@@ -14,3 +14,5 @@ Materials
 4:Heating Element:https://create.arduino.cc/projecthub/mohannad-rawashdeh/arduino-control-ac-water-heater-temperature-e0712e
 https://www.amazon.com/Lookatool%C2%AE-Travel-Element-Immersion-Adapter/dp/B0154QQK94
 5:Brine Shrimp:http://www.carolina.com/brine-shrimp/brine-shrimp-artemia-eggs-1-oz/142240.pr?question=
+Total Cost: 25.28, 11.67, 14.27, 31.005. 
+$82.23  20.56 per person
