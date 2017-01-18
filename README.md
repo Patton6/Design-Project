@@ -5,3 +5,6 @@ Things to Do:
   1. Code to update temperature variables
   2. Code to put text file on sd card
   3. Code to update text file with temperature variables
+
+Resources:
+  1. https://fcps.blackboard.com/webapps/blackboard/content/listContent.jsp?course_id=_1032125_1&content_id=_34973131_1
