@@ -15,4 +15,6 @@ Materials
 https://www.amazon.com/Lookatool%C2%AE-Travel-Element-Immersion-Adapter/dp/B0154QQK94
 5:Brine Shrimp:http://www.carolina.com/brine-shrimp/brine-shrimp-artemia-eggs-1-oz/142240.pr?question=
 Brine Shrimp food:http://www.carolina.com/fish-food/brine-shrimp-flakes-109-oz-30-g/674753.pr?question=fish+flakes
-Total Cost: 
+Total Cost: 14.28, 8.40, 31.01, 20.67
+Equals: $74.36
+Each Member Pays Josh: About $18-19
