@@ -9,10 +9,10 @@ Things to Do:
 Resources (Note we need to order 3 of each material):
   1. https://fcps.blackboard.com/webapps/blackboard/content/listContent.jsp?course_id=_1032125_1&content_id=_34973131_
 Materials
-2. Tanks: http://www.carolina.com/animal-habitats/aquarium-terrarium-plastic/FAM_670390.pr?question=
+
 3. Air Stone: http://www.petsmart.com/fish/supplies/aquarium-maintenance/air-pumps-and-air-stones/top-fin-12-inch-aquarium-air-stone-16847.html?cgid=300087
 4:Heating Element:https://create.arduino.cc/projecthub/mohannad-rawashdeh/arduino-control-ac-water-heater-temperature-e0712e
 https://www.amazon.com/Lookatool%C2%AE-Travel-Element-Immersion-Adapter/dp/B0154QQK94
 5:Brine Shrimp:http://www.carolina.com/brine-shrimp/brine-shrimp-artemia-eggs-1-oz/142240.pr?question=
-Total Cost: 25.28, 11.67, 14.27, 31.005. 
-$82.23  20.56 per person
+Brine Shrimp food:http://www.carolina.com/fish-food/brine-shrimp-flakes-109-oz-30-g/674753.pr?question=fish+flakes
+Total Cost: 
