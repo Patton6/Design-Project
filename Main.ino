@@ -11,10 +11,19 @@ int OutPutPin3 = 2; //sets the pin for the output for tank 3 sensor
 int HeatElPin1 = 10; //sets the pin for the heating element for tank 1
 int HeatElPin2 = 11; //sets the pin for the heating element for tank 2
 int HeatElPin3 = 12; //sets the pin for the heating element for tank 3
+//Variables for Writing to Storage Device
+int IncomingByte = 0; //incoming byte variable
+int FileNumber = 1; //file number variable
+int NumOfChars; //number of characters variable
+long int ValToWrite; //value to write variable
+long int X; //variable for counting functions
+long int StartLogTime = 0; //varibale to log time since program started
 
 int setup() {
   /*Initial Arduino Set Up*/
   Serial.begin(9600); //sets the bit rate to communicate with the computer
+  Serial.print("IPA"); //sets the vdip to use ascii numbers for user to read
+  serial.print(13, BYTE); //return character to tell vdip that it is end of message
   pinMode(HeatElPin1, OUTPUT); //sets up tank 1 heating element's pin to output
   pinMode(HeatElPin2, OUTPUT); //sets up tank 2 heating element's pin to output
   pinMode(HeatElPin3, OUTPUT); //sets up tank 3 heating element's pin to output
