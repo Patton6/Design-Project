@@ -50,16 +50,28 @@ int setup() {
   
   /*Logic Gates for Initial Heating*/
   //Heating for Initial Hatching of the Brine Shrimp
-  if (fahrenheit1 <= 80){
+  if (fahrenheit1 <= 68){
       digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
   }
-  if (fahrenheit2 <= 80){
+  if (fahrenheit2 <= 68){
       digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 2 heating element to 5V 
   }
-  if (fahrenheit3 <= 80){
+  if (fahrenheit3 <= 68){
       digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 3 heating element to 5V 
   }
 }
+
+ if (fahrenheit1 >= 79){
+      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
+  }
+  if (fahrenheit2 >= 79){
+      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 2 heating element to 5V 
+  }
+  if (fahrenheit3 >= 79){
+      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 3 heating element to 5V 
+  }
+}
+
 
 void loop() {
   /*Continuous Water Temperature Testing*/
