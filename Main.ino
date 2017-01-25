@@ -92,4 +92,4 @@ void loop() {
   Serial.print(fahrenheit3);
   Serial.println(" degrees Fahrenheit, Tank 3.");
   
-  delay(10000);
+  delay(60000);
