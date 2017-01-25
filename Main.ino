@@ -62,13 +62,13 @@ int setup() {
 }
 
  if (fahrenheit1 >= 79){
-      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
+      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 1 heating element to 5V 
   }
   if (fahrenheit2 >= 79){
-      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 2 heating element to 5V 
+      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 2 heating element to 5V 
   }
   if (fahrenheit3 >= 79){
-      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 3 heating element to 5V 
+      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 3 heating element to 5V 
   }
 }
 
