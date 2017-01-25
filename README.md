@@ -19,3 +19,6 @@ Brine Shrimp food:http://www.carolina.com/fish-food/brine-shrimp-flakes-109-oz-3
 Total Cost: 14.28, 8.40, 31.01, 20.67
 Equals: $74.36
 Each Member Pays Josh: About $18-19
+
+Temperature Sensor:http://www.miniinthebox.com/ds18b20-waterproof-digital-temperature-probe-black-silver_p4536382.html?currency=USD&litb_from=paid_adwords_shopping&sku=429_16931&utm_source=google_shopping&utm_medium=cpc&adword_mt=&adword_ct=154143778448&adword_kw=&adword_pos=1o12&adword_pl=&adword_net=g&adword_tar=&adw_src_id=9772115911_686640436_41030247732_pla-211894547562&gclid=CMDkg7u43dECFYmLswodcOUO8Q 3 of these 
+Heatin Pads:https://www.sparkfun.com/products/11288?_ga=1.95556500.901220022.1484323746 3 of these
