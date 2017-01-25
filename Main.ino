@@ -20,7 +20,7 @@ long int X; //variable for counting functions
 long int StartLogTime = 0; //varibale to log time since program started 
 int var = 1;
 
-void setup() {
+int setup() {
   /*Initial Arduino Set Up*/
   Serial.begin(9600); //sets the bit rate to communicate with the computer
   pinMode(HeatElPin1, OUTPUT); //sets up tank 1 heating element's pin to output
@@ -49,6 +49,25 @@ void setup() {
   
   /*Logic Gates for Initial Heating*/
   //Heating for Initial Hatching of the Brine Shrimp
+  /*Logic Gates*/
+  if (fahrenheit1 <= 68){
+      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
+  }
+  if (fahrenheit2 <= 68){
+      digitalWrite(HeatElPin2, HIGH); //sets the pin for tank 2 heating element to 5V 
+  }
+  if (fahrenheit3 <= 68){
+      digitalWrite(HeatElPin3, HIGH); //sets the pin for tank 3 heating element to 5V 
+  }
+  if (fahrenheit1 >= 79) {
+      digitalWrite(HeatElPin1, LOW); //turns heating element for tank 1 off
+  }
+  if (fahrenheit2 >= 79) {
+      digitalWrite(HeatElPin2,LOW);//turns heating element for tank 2 off
+  }
+  if (fahrenheit3 >= 79) {
+    digitalWrite(HeatElPin3,LOW); //turns heating element for tank 3 off
+  }
 
 }
 
@@ -77,7 +96,8 @@ void loop() {
   float fahrenheit3 = millivolts3/10;
   Serial.print(fahrenheit3);
   Serial.println(" degrees Fahrenheit, Tank 3.");
-   if (fahrenheit1 <= 68){
+  /*Logic Gates*/
+  if (fahrenheit1 <= 68){
       digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
   }
   if (fahrenheit2 <= 68){
