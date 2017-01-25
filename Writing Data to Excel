@@ -1,17 +1,17 @@
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600); // the bigger number the better
+  Serial.begin(9600);
 Serial.println("CLEARDATA"); //clears up any data left from previous projects
 Serial.println("LABEL,Acolumn,Bcolumn,Ccolumn,..."); //always write LABEL, so excel knows the next things will be the names of the columns (instead of Acolumn you could write Time for instance)
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.read(Adata,Bdata,Cdata,...)
   Serial.print("DATA,
   Serial.print(Adata);
   Serial.print(Bdata);
   Serial.print(Cdata);
   Serial.println(...); //be sure to add println to the last command so it knows to go into the next row on the second run
   delay(100); //add a delay
+  Serial.read(Adata,Bdata,Cdata,...)
 }
