@@ -18,9 +18,16 @@ Do not wire the heating pads directly into a breadboard as this can cause the br
 int btnPin = 2;
 boolean btnPressed = false;
 int fetPin = 3;
-int led1 = 9;
-int led2 = 10;
-int led3 = 11;
+int led1 = 1;
+int led2 = 2;
+int led3 = 3;
+int led4 = 4;
+int led5 = 5;
+int led5 = 6;
+int led6 = 7;
+int led7 = 8;
+int led8 = 9;
+int led9 = 10;
 int mode;
 
 void setup() {                
@@ -32,14 +39,6 @@ void setup() {
   pinMode(led3, OUTPUT);  
 }
 
-// the loop routine runs over and over again forever:
-void loop() {
-  //Increment mode on depress, unless mode = 3, then reset to 0
-  if (btnPressed && digitalRead(btnPin) == LOW)
-    mode = mode == 3 ? 0 : mode + 1;
-  //Assign button state
-  btnPressed = digitalRead(btnPin);
-  switch (mode)
   {
     case 0:
       analogWrite(fetPin, 0); //off
