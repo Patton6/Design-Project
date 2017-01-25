@@ -3,7 +3,7 @@
  Heating Pad Hand Warmer Blanket Code Example
   SparkFun Electronics, Pamela, 1/24/2013
   Beerware License
-
+Do not wire the heating pads directly into a breadboard as this can cause the breadboard to melt.
   Hardware Connections:
   -led1 = D9;
   -led2 = D10;
