@@ -1,4 +1,4 @@
-void setup() {
+void setup() { //http://www.instructables.com/id/Sending-data-from-Arduino-to-Excel-and-plotting-it/?ALLSTEPS this where i got the code. idk how to use it context.
   // put your setup code here, to run once:
   Serial.begin(9600);
 Serial.println("CLEARDATA"); //clears up any data left from previous projects
