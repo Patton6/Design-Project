@@ -4,6 +4,7 @@ void setup() { //http://www.instructables.com/id/Sending-data-from-Arduino-to-Ex
 Serial.println("CLEARDATA"); //clears up any data left from previous projects
 Serial.println("LABEL,Tank1,Tank2,Tank3,..."); //always write LABEL, so excel knows the next things will be the names of the columns
 }
+
 void loop() {
   /*Continuous Water Temperature Testing*/
   Serial.println("Temperatures");
@@ -29,8 +30,7 @@ void loop() {
   
   delay(10000);
   
-void loop() {
-  // put your main code here, to run repeatedly:
+  void loop() {
   Serial.print("DATA, farenheit1, farenheit2, farenheit3")
   Serial.print(farenheit1);
   Serial.print(farenheit2);
@@ -38,4 +38,5 @@ void loop() {
   Serial.println(...); //be sure to add println to the last command so it knows to go into the next row on the second run
   delay(100); //add a delay
   Serial.read(farenheit1,farenheit2,farenheit3,...)
+  }
 }
