@@ -17,7 +17,8 @@ int FileNumber = 1; //file number variable
 int NumOfChars; //number of characters variable
 long int ValToWrite; //value to write variable
 long int X; //variable for counting functions
-long int StartLogTime = 0; //varibale to log time since program started
+long int StartLogTime = 0; //varibale to log time since program started 
+int var = 1;
 
 void setup() {
   /*Initial Arduino Set Up*/
@@ -48,30 +49,15 @@ void setup() {
   
   /*Logic Gates for Initial Heating*/
   //Heating for Initial Hatching of the Brine Shrimp
-  if (fahrenheit1 <= 68){
-      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
-  }
-  if (fahrenheit2 <= 68){
-      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 2 heating element to 5V 
-  }
-  if (fahrenheit3 <= 68){
-      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 3 heating element to 5V 
-  }
+
 }
-  if (fahrenheit1 >= 68){
-      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 1 heating element off 
-  }
-  if (fahrenheit2 >= 68){
-      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 2 heating element off
-  }
-  if (fahrenheit3 >= 68){
-      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 3 heating element off
-  }
-}
+
 
 void loop() {
   /*Continuous Water Temperature Testing*/
   Serial.println("Temperatures");
+  Serial.print("Minute ");
+ Serial.println(var); 
   
   //Temperature sensor 1 code (Do not EDIT, comes from Manufacture's Website)
   int rawvoltage1 = analogRead(OutPutPin1);
@@ -91,5 +77,24 @@ void loop() {
   float fahrenheit3 = millivolts3/10;
   Serial.print(fahrenheit3);
   Serial.println(" degrees Fahrenheit, Tank 3.");
-  
-  delay(60000);
+   if (fahrenheit1 <= 68){
+      digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 1 heating element to 5V 
+  }
+  if (fahrenheit2 <= 68){
+      digitalWrite(HeatElPin2, HIGH); //sets the pin for tank 2 heating element to 5V 
+  }
+  if (fahrenheit3 <= 68){
+      digitalWrite(HeatElPin3, HIGH); //sets the pin for tank 3 heating element to 5V 
+  }
+  if (fahrenheit1 >= 79) {
+      digitalWrite(HeatElPin1, LOW); //turns heating element for tank 1 off
+  }
+  if (fahrenheit2 >= 79) {
+      digitalWrite(HeatElPin2,LOW);//turns heating element for tank 2 off
+  }
+  if (fahrenheit3 >= 79) {
+    digitalWrite(HeatElPin3,LOW); //turns heating element for tank 3 off
+  }
+  delay(6000);
+  var= var + 1;
+}
