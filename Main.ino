@@ -58,6 +58,16 @@ void setup() {
       digitalWrite(HeatElPin1, HIGH); //sets the pin for tank 3 heating element to 5V 
   }
 }
+  if (fahrenheit1 >= 68){
+      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 1 heating element off 
+  }
+  if (fahrenheit2 >= 68){
+      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 2 heating element off
+  }
+  if (fahrenheit3 >= 68){
+      digitalWrite(HeatElPin1, LOW); //sets the pin for tank 3 heating element off
+  }
+}
 
 void loop() {
   /*Continuous Water Temperature Testing*/
