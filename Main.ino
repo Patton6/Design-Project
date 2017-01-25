@@ -76,7 +76,7 @@ void loop() {
   /*Continuous Water Temperature Testing*/
   Serial.println("Temperatures");
   Serial.print("Minute ");
- Serial.println(var); 
+  Serial.println(var); 
   
   //Temperature sensor 1 code (Do not EDIT, comes from Manufacture's Website)
   int rawvoltage1 = analogRead(OutPutPin1);
