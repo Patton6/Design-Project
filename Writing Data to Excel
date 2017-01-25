@@ -1,17 +1,41 @@
-void setup() { //http://www.instructables.com/id/Sending-data-from-Arduino-to-Excel-and-plotting-it/?ALLSTEPS this where i got the code. idk how to use it context.
+void setup() { //http://www.instructables.com/id/Sending-data-from-Arduino-to-Excel-and-plotting-it/?ALLSTEPS this where i got the code. 
   // put your setup code here, to run once:
   Serial.begin(9600);
 Serial.println("CLEARDATA"); //clears up any data left from previous projects
-Serial.println("LABEL,Acolumn,Bcolumn,Ccolumn,..."); //always write LABEL, so excel knows the next things will be the names of the columns (instead of Acolumn you could write Time for instance)
+Serial.println("LABEL,Tank1,Tank2,Tank3,..."); //always write LABEL, so excel knows the next things will be the names of the columns
 }
-
+void loop() {
+  /*Continuous Water Temperature Testing*/
+  Serial.println("Temperatures");
+  
+  //Temperature sensor 1 code (Do not EDIT, comes from Manufacture's Website)
+  int rawvoltage1 = analogRead(OutPutPin1);
+  float millivolts1 = (rawvoltage1/1024.0) * 5000;
+  float fahrenheit1 = millivolts1/10;
+  Serial.print(fahrenheit1);
+  Serial.println(" degrees Fahrenheit, Tank 1,");
+  //Temperature sensor 2 code (Do not EDIT, comes from Manufacture's Website)
+  int rawvoltage2 = analogRead(OutPutPin2);
+  float millivolts2 = (rawvoltage2/1024.0) * 5000;
+  float fahrenheit2 = millivolts2/10;
+  Serial.print(fahrenheit2);
+  Serial.println(" degrees Fahrenheit, Tank 2,");
+  //Temperature sesnor 3 code (Do not EDIT, comes from Manufacture's Website)
+  int rawvoltage3 = analogRead(OutPutPin3);
+  float millivolts3 = (rawvoltage3/1024.0) * 5000;
+  float fahrenheit3 = millivolts3/10;
+  Serial.print(fahrenheit3);
+  Serial.println(" degrees Fahrenheit, Tank 3.");
+  
+  delay(10000);
+  
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.print("DATA,
-  Serial.print(Adata);
-  Serial.print(Bdata);
-  Serial.print(Cdata);
+  Serial.print("DATA, farenheit1, farenheit2, farenheit3")
+  Serial.print(farenheit1);
+  Serial.print(farenheit2);
+  Serial.print(farenheit3);
   Serial.println(...); //be sure to add println to the last command so it knows to go into the next row on the second run
   delay(100); //add a delay
-  Serial.read(Adata,Bdata,Cdata,...)
+  Serial.read(farenheit1,farenheit2,farenheit3,...)
 }
