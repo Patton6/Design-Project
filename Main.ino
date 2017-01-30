@@ -26,6 +26,7 @@ int setup() {
   pinMode(HeatElPin1, OUTPUT); //sets up tank 1 heating element's pin to output
   pinMode(HeatElPin2, OUTPUT); //sets up tank 2 heating element's pin to output
   pinMode(HeatElPin3, OUTPUT); //sets up tank 3 heating element's pin to output
+  Serial.println("Minute 0"); //set 
   
   /*Primary Heating Test on Startup*/
   //Temperature sensor 1 code (Do not EDIT, comes from Manufacture's Website)
@@ -74,9 +75,9 @@ int setup() {
 
 void loop() {
   /*Continuous Water Temperature Testing*/
-  Serial.println("Temperatures");
-  Serial.print("Minute ");
-  Serial.println(var); 
+  Serial.println("Temperatures"); //prints "Temperatures" to the serial, will be used for logging into Text File
+  Serial.print("Minute "); //prints "Minute ", will be used in conjunction with time variable
+  Serial.println(var); //prints the minute variable (is actually the time the loop has continued, while each loop takes 60 seconds)
   
   //Temperature sensor 1 code (Do not EDIT, comes from Manufacture's Website)
   int rawvoltage1 = analogRead(OutPutPin1);
@@ -85,7 +86,7 @@ void loop() {
   Serial.print(fahrenheit1);
   Serial.println(" degrees Fahrenheit, Tank 1,");
   //Temperature sensor 2 code (Do not EDIT, comes from Manufacture's Website)
-  int rawvoltage2 = analogRead(OutPutPin2);
+  int rawvoltage2 = analogRead(OutPutPin2); 
   float millivolts2 = (rawvoltage2/1024.0) * 5000;
   float fahrenheit2 = millivolts2/10;
   Serial.print(fahrenheit2);
@@ -105,16 +106,16 @@ void loop() {
   }
   if (fahrenheit3 <= 68){
       digitalWrite(HeatElPin3, HIGH); //sets the pin for tank 3 heating element to 5V 
-  }
+   
   if (fahrenheit1 >= 79) {
       digitalWrite(HeatElPin1, LOW); //turns heating element for tank 1 off
   }
   if (fahrenheit2 >= 79) {
-      digitalWrite(HeatElPin2,LOW);//turns heating element for tank 2 off
+      digitalWrite(HeatElPin2,LOW);//turns heating element  for tank 2 off
   }
   if (fahrenheit3 >= 79) {
     digitalWrite(HeatElPin3,LOW); //turns heating element for tank 3 off
   }
-  delay(6000);
+  delay(60000);
   var= var + 1;
 }
